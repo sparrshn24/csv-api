@@ -1,0 +1,23 @@
+Run Instructions:
+
+Need to setup a virtual environment of Python 3.9.10 as that is the environment in which the code is run.
+The API files are named after the task itself : priority1.py and priority2.py. The test files are named 
+after the API file whose methods they are testing : test_priority1.py and test_priority2.py.
+
+
+Testing Instructions:
+
+To run all the tests at once, first install pytest using pip install pytest and then just write pytest 
+in the code directory to get all tests to run.
+
+OpenAI API:
+
+The free API proved to be a hindrance, especially given that the prompt required to get the similar intents
+was not very small and so it was hard to get the requests processed without being rate limited. When I figured out a way
+to not be rate limited, my requests would process for an extremely long amount of time. In light of this,
+I bought the higher tier API and I am happy to share the API key if needed.
+In a real life project, I wouldn't be sharing this and even in my code, it is an environment variable.
+
+
+
+ 

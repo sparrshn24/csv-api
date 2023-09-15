@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "133b79a6-9a5e-46d1-b112-13de7d3a5e7f",
+		"name": "PRIORITY 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17331094"
+	},
+	"item": [
+		{
+			"name": "Generating 3 intents taking into consideration 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/generate/like=1,2&count=3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"generate",
+						"like=1,2&count=3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incorrect number of count params",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/generate/like=4&count=3,6,7",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"generate",
+						"like=4&count=3,6,7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate Limited Count Param",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/generate/like=4&count=7",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"generate",
+						"like=4&count=7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Many Like Params and One Intent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/generate/like=4,5,6&count=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"generate",
+						"like=4,5,6&count=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No Separation Between Indices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/generate/like=2589&count=4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"generate",
+						"like=2589&count=4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate Limiting Like Param",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5001/api/generate/like=2,3,4,5,6,7,8,9&count=4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"generate",
+						"like=2,3,4,5,6,7,8,9&count=4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
